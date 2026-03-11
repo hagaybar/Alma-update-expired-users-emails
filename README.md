@@ -13,27 +13,22 @@ Script for updating email addresses of expired users in Alma ILS.
 
 - Python 3.12+
 - Poetry
-- AlmaAPITK repository cloned locally
+- AlmaAPITK repository cloned locally (as sibling directory)
 - Alma API credentials (environment variables)
 
 ## Installation
 
 1. Clone AlmaAPITK (if not already done):
 ```bash
-git clone https://github.com/hagaybar/AlmaAPITK.git /path/to/AlmaAPITK
+git clone https://github.com/hagaybar/AlmaAPITK.git ../AlmaAPITK
 ```
 
-2. Install this project's dependencies:
+2. Install this project's dependencies (includes almaapitk as path dependency):
 ```bash
 poetry install
 ```
 
-3. Set PYTHONPATH to include AlmaAPITK's src directory:
-```bash
-export PYTHONPATH=/path/to/AlmaAPITK/src:$PYTHONPATH
-```
-
-**Note:** Until AlmaAPITK is published as a proper pip package, the PYTHONPATH approach is required.
+That's it! No PYTHONPATH configuration needed.
 
 ## Configuration
 
@@ -56,8 +51,6 @@ cp config/email_update_config.example.json config/email_update_config.json
 ### Dry Run (default, safe)
 
 ```bash
-# Make sure PYTHONPATH is set (see Installation)
-export PYTHONPATH=/path/to/AlmaAPITK/src:$PYTHONPATH
 poetry run python update_expired_user_emails.py --config config/email_update_config.json
 ```
 
