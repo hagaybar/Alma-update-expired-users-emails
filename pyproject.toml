@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "alma-update-expired-users-emails"
+version = "1.0.0"
+description = "Script for updating email addresses of expired users in Alma ILS"
+authors = ["Hagay Bar-Or <hagaybar@tauex.tau.ac.il>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+# AlmaAPITK dependencies (until AlmaAPITK package is properly published)
+# Note: AlmaAPITK must be cloned locally and PYTHONPATH must include its src/ directory
+# See README.md for setup instructions
+requests = "^2.32"
+pandas = "^2.3"
+openpyxl = "^3.1"
+boto3 = "^1.39"
+pypdf2 = "^3.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
