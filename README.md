@@ -33,11 +33,11 @@ That's it! No PYTHONPATH configuration needed.
 If you need to install almaapitk separately:
 
 ```bash
-# Using pip
-pip install git+https://github.com/hagaybar/AlmaAPITK.git@phase-f-packaging
+# Using pip (pinned to release tag)
+pip install git+https://github.com/hagaybar/AlmaAPITK.git@v0.2.0
 
-# Using poetry
-poetry add git+https://github.com/hagaybar/AlmaAPITK.git#phase-f-packaging
+# Using poetry (pinned to release tag)
+poetry add git+https://github.com/hagaybar/AlmaAPITK.git#v0.2.0
 ```
 
 ## Configuration
