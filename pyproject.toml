@@ -8,8 +8,8 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
-# AlmaAPITK package from GitHub (pinned to commit with full restructure)
-almaapitk = { git = "https://github.com/hagaybar/AlmaAPITK.git", rev = "59358bd" }
+# AlmaAPITK package from GitHub (pinned to release tag)
+almaapitk = { git = "https://github.com/hagaybar/AlmaAPITK.git", tag = "v0.2.1" }
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0"
