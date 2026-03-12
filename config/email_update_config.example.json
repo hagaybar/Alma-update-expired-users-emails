@@ -10,7 +10,7 @@
   "_environment_options": ["SANDBOX", "PRODUCTION"],
   "_environment_note": "ALWAYS test in SANDBOX first!",
 
-  "set_id": "12345678900004146",
+  "set_id": "39582119870004146",
   "_set_id_note": "Alma USER set ID - get this from Alma Configuration > Manage Sets",
 
   "tsv_file": null,
