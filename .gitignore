@@ -46,6 +46,7 @@ logs/
 htmlcov/
 .tox/
 .nox/
+.local_tests/
 
 # Poetry
 poetry.lock
