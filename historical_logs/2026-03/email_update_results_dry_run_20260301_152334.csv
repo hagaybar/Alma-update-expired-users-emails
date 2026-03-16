@@ -1,0 +1,10 @@
+User_ID,Original_Email,Current_Email,New_Email,Success,Error,Mode,Is_Revert,Timestamp
+000093476,nielsd@mail.tau.ac.il,nielsd@mail.tau.ac.il,nielsd@mail.tau.ac.il.scrubbed,True,,DRY_RUN,False,2026-03-01 15:23:26
+000250134,leaezra@mail.tau.ac.il,leaezra@mail.tau.ac.il,leaezra@mail.tau.ac.il.scrubbed,True,,DRY_RUN,False,2026-03-01 15:23:26
+000552950,giladharish@mail.tau.ac.il,giladharish@mail.tau.ac.il,giladharish@mail.tau.ac.il.scrubbed,True,,DRY_RUN,False,2026-03-01 15:23:26
+000560607,dafnamah@mail.tau.ac.il,dafnamah@mail.tau.ac.il,dafnamah@mail.tau.ac.il.scrubbed,True,,DRY_RUN,False,2026-03-01 15:23:26
+000565,oriyaperetz@mail.tau.ac.il,oriyaperetz@mail.tau.ac.il,oriyaperetz@mail.tau.ac.il.scrubbed,True,,DRY_RUN,False,2026-03-01 15:23:26
+000573,amnonmorag@mail.tau.ac.il,amnonmorag@mail.tau.ac.il,amnonmorag@mail.tau.ac.il.scrubbed,True,,DRY_RUN,False,2026-03-01 15:23:26
+000574,amitb@mail.tau.ac.il,amitb@mail.tau.ac.il,amitb@mail.tau.ac.il.scrubbed,True,,DRY_RUN,False,2026-03-01 15:23:26
+000692798,nehamak@mail.tau.ac.il,nehamak@mail.tau.ac.il,nehamak@mail.tau.ac.il.scrubbed,True,,DRY_RUN,False,2026-03-01 15:23:26
+000814806,uzibeller@mail.tau.ac.il,uzibeller@mail.tau.ac.il,uzibeller@mail.tau.ac.il.scrubbed,True,,DRY_RUN,False,2026-03-01 15:23:26

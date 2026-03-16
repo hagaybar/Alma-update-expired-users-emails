@@ -1,0 +1,71 @@
+{
+  "_comment": "Email Update Script Configuration Template",
+  "_description": "Configuration for updating expired user emails in Alma",
+  
+  "_required_settings": {
+    "_note": "You must specify either set_id OR tsv_file (not both)"
+  },
+  
+  "environment": "SANDBOX",
+  "_environment_options": ["SANDBOX", "PRODUCTION"],
+  "_environment_note": "ALWAYS test in SANDBOX first!",
+  
+  "_set_id_note": "Alma USER set ID - get this from Alma Configuration > Manage Sets",
+  
+  "tsv_file": "/home/hagaybar/projects/AlmaAPITK/src/projects/update_expired_users_emails/input/first_run_3092025.tsv",
+  "_tsv_file_note": "Alternative to set_id: path to TSV file with user IDs (one per line)",
+  "_tsv_example": "C:/git projects/AlmaAPITK/revert_users.tsv",
+  
+  "email_pattern": "{original_local_part}@scrubbed.{original_domain}",
+  "_email_pattern_note": "Must contain {original_local_part} and {original_domain} placeholders. Optional: {first_name}, {last_name}",
+  "_email_pattern_examples": [
+    "disabled.{original_local_part}@{original_domain}",
+    "{user_id}.expired@{original_domain}",
+    "former.{original_local_part}@{original_domain}"
+  ],
+  
+  "days_expired": 1095,
+  "_days_expired_note": "Minimum days expired to qualify (730 = 2 years, 1095 = 3 years)",
+  
+  "dry_run": false,
+  "_dry_run_note": "SAFETY: true = no changes made, false = actual updates. START WITH TRUE!",
+  
+  "_optional_settings": {
+    "_note": "These settings have reasonable defaults but can be customized"
+  },
+  
+  "max_users": null,
+  "_max_users_note": "Limit for testing (null = no limit, 10 = process only first 10 users)",
+  "_max_users_example": 3,
+  
+  "batch_size": 50,
+  "_batch_size_note": "Users processed per batch (for rate limiting)",
+  
+  "output_dir": "./output",
+  "_output_dir_note": "Directory for log files and CSV results",
+  
+  "_usage_examples": {
+    "_cli_with_config": "python update_expired_user_emails.py --config email_update_config.json",
+    "_cli_override": "python update_expired_user_emails.py --config email_update_config.json --environment PRODUCTION --live",
+    "_cli_only": "python update_expired_user_emails.py --set-id 12345678900004146 --environment SANDBOX --days 730"
+  },
+  
+  "_safety_checklist": [
+    "1. Set environment to SANDBOX for testing",
+    "2. Set dry_run to true for initial tests", 
+    "3. Use max_users for small test runs first",
+    "4. Verify email_pattern generates correct emails",
+    "5. Check days_expired matches your requirements",
+    "6. Only set dry_run to false after successful testing",
+    "7. Only use PRODUCTION after SANDBOX testing"
+  ],
+  
+  "_workflow_steps": [
+    "1. Get USER set ID from Alma Configuration > Manage Sets",
+    "2. Update set_id and email_pattern in this config", 
+    "3. Test with dry_run=true and max_users=10",
+    "4. Review output CSV and logs",
+    "5. Increase max_users or remove limit",
+    "6. When satisfied, set dry_run=false for live update"
+  ]
+}
